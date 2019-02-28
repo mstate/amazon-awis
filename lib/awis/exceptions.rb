@@ -3,8 +3,6 @@
 module Awis
   # Awis exceptions can be caught by rescuing: Awis::StandardError
 
-  class StandardError < StandardError; end
-  class ArgumentError < StandardError; end
   class CertificateError < StandardError; end
 
   class ResponseError < StandardError
