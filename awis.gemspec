@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'awis/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'awis-sdk-ruby'
+  spec.name          = 'awis-sdk-ruby_'
   spec.version       = Awis::VERSION
   spec.authors       = ['Encore Shao']
   spec.email         = ['encore.shao@gmail.com']
