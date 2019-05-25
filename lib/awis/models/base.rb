@@ -6,7 +6,7 @@ module Awis
       attr_accessor :response, :status_code, :request_id
 
       def loading_response(response)
-        Awis::Utils::XML.new(response.response_body)
+        Awis::Utils::XML.new(response.response_body.force_encoding(Encoding::UTF-8))
       end
 
       def root_node_name
