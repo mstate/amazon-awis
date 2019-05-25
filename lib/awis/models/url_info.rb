@@ -305,7 +305,7 @@ module Awis
       end
 
       def float_value?(text)
-        Float(text&.delete('%'), exception: false).present?
+        !!Float(text&.delete('%'), exception: false)
       end
     end
 
@@ -342,7 +342,8 @@ module Awis
       end
 
       def phone_number_collections(phone_numbers)
-        return @phone_numbers = [] if phone_numbers.nil? || phone_numbers.empty?
+        return (@phone_numbers = []) if phone_numbers.nil? ||
+          (phone_numbers.is_a?(Array) && phone_numbers.compact.empty?)
 
         phone_numbers.map { |item| @phone_numbers << PhoneNumber.new(item) }
       end
