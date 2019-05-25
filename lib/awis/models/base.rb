@@ -6,8 +6,8 @@ module Awis
       attr_accessor :response, :status_code, :request_id
 
       def loading_response(response)
-        Awis::Utils::XML.new(response.response_body.force_encoding(Encoding::UTF-8))
-      end
+        Awis::Utils::XML.new(response.response_body.force_encoding(Encoding::UTF_8))
+      en
 
       def root_node_name
         "/aws:#{action_name}Response/aws:Response/aws:#{action_name}Result/aws:Alexa"
