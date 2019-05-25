@@ -32,7 +32,7 @@ module Awis
 
         response.each_node do |node, path|
           text = node.inner_xml
-          candidate_text = text.delete(',')
+          candidate_text = text.delete(',').force_encoding(Encoding::UTF_8)
           value = if integer_value?(candidate_text) && node.name != 'aws:Delta'
                     candidate_text.to_i
                   elsif float_value?(candidate_text)
