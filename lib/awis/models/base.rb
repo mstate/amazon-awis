@@ -7,7 +7,7 @@ module Awis
 
       def loading_response(response)
         Awis::Utils::XML.new(response.response_body.force_encoding(Encoding::UTF_8))
-      en
+      end
 
       def root_node_name
         "/aws:#{action_name}Response/aws:Response/aws:#{action_name}Result/aws:Alexa"
