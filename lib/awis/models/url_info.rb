@@ -305,7 +305,7 @@ module Awis
       end
 
       def float_value?(text)
-        Float(text&.delete('%'), execption: false).present?
+        Float(text&.delete('%'), exception: false).present?
       end
     end
 
